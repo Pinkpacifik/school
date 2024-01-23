@@ -1,0 +1,215 @@
+/* -- Lien vers les polices Google Fonts -- */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Condensed&family=Ubuntu:wght@700&display=swap");
+/* -- Présentation de l'écran -- */
+html,body{height:100%;padding:0;margin:0}
+@media screen{
+    body{
+	font-family:Ubuntu;
+	font-size:1em;
+	color:white;
+	background-color:#606163;
+	background-image:url("../images/Img-background.png");
+	background-position:top right;
+	background-size:30%;
+	background-repeat:no-repeat;
+	background-attachment:fixed}
+	}
+
+/* ----- RESPONSIVE MENU ----- */
+.hamburger-icon {
+  position: absolute;
+  z-index: 3;
+  top: 2vh;
+  left: 2vw;
+  padding-bottom: 3vh;
+}
+.hamburger-icon span {
+  height: 5px;
+  width: 33px;
+  background-color: #cdcdcd;
+  border-radius: 3px;
+  display: block;
+  margin: 5px 0px 5px 0px;
+  transition: 0.7s ease-in-out;
+  transform: none;
+}
+#openmenu:checked ~ .menu-pane {
+  left: -5vw;
+  transform: translateX(-5vw);
+}
+#openmenu:checked ~ .page {
+  display: none;
+}
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+  transform: translate(0%, 175%) rotate(-45deg);
+  background-color: white;
+}
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+  transform: rotate(45deg);
+  background-color: white;
+}
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
+  opacity: 0;
+}
+.menu-pane {
+  background-color: black;
+  position: absolute;
+  transform: translateX(-100vw);
+  transform-origin: (0, 0);
+  width: 60vw;
+  height: 100%;
+  transition: 0.6s ease-in-out;
+}
+.menu-pane p {
+  color: black;
+  font-size: 0.6em;
+}
+.menu-pane nav {
+  padding: 10%;
+}
+.menu-links li, a, span {
+  transition: 0.6s ease-in-out;
+}
+.menu-pane ul {
+  padding: 10%;
+  display: inline-block;
+}
+.menu-pane li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 30px;
+  font-size: 1em;
+  list-style: none;
+}
+.menu-pane li:first-child {
+  margin-left: 10px;
+  font-size: 1.3em;
+}
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+}
+.menu-links li:hover a {
+  color: #606163;
+}
+.menu-links li:first-child:hover a {
+  color: black;  
+  background-color: #606163;
+}
+#Titre {
+  background-color: #606163;
+  display: block;
+  opacity: 0;
+}
+.menu-links li:first-child:hover #Titre {
+  opacity: 1;
+}
+.menu-links li:first-child a {
+  padding: 5px;
+}
+input.hamburger-checkbox {
+  position: absolute;
+  z-index: 2;
+  top: 5vh;
+  left: 5vw;
+  width: 10vw;
+  opacity: 0;
+  height: 6vh;
+}
+
+/* -- Paramétrage du bloc de Page -- */
+.page{
+	position:relative;
+	padding-top: 3vh;
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	height:100%;
+	line-height:normal;
+	}
+
+h1,h2,h3,h4,h5{
+	line-height:1.3;
+	text-align:center;
+	font-weight: bold;}
+.bg-position-top{background-position:50% 0}
+.bg-position-middle{background-position:50% 50%}
+.bg-position-bottom{background-position:50% 100%}
+.page:before{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	filter:alpha(opacity=40);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	opacity:0.4}
+img{
+	max-width:100%;
+	width:auto\9;
+	height:auto}
+a,a:link{
+	color:inherit;
+	filter:alpha(opacity=85);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	opacity:0.85}
+a:hover,a:focus,a:active{
+	filter:alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	opacity:1;
+	-webkit-transition:all .3s ease-in-out;
+	transition:all .3s ease-in-out}
+ul,ol{
+	display:inline-block;
+	text-align:left;
+	max-width:50%}
+.container{
+	position:absolute;
+	display:table-cell;
+	width:80%;
+	max-width:900px;
+	vertical-align:middle;
+	padding:1em 2em;
+	z-index:1}
+.content{
+	font-family:"Ubuntu Condensed";
+	text-align: justify;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding-right: 1em;
+	padding-left: 1em;	
+	border-top: solid;
+	border-bottom: solid}
+.logo {  
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	text-align: center;}
+ .logo img{
+	width:60px;
+	height:60px;}
+.social-links {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	text-align:center;
+	line-height:normal}
+.social-links a{
+	padding:0.5em;}
+.social-links a:link{
+	color:transparent;}	
+.foot-page{
+	position:absolute;
+	text-align:center;
+	display:block;
+	bottom:0;left:0;
+	right:0;
+	padding:1em;
+	font-style: italic;
+	font-size:0.8em}
+.foot-page p{
+	margin:0;
+	padding:0;
+	font-size:12px}
+	
+
